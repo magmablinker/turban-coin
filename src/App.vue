@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="row mt-3">
-      <div class="col-12">
+      <div class="col-12 align-items-center justify-content-center">
         <div class="turban-border text-center p-2">
           <h4 class="display-2 m-0">
             Turban Coin
@@ -9,7 +9,7 @@
         </div>
       </div>
     </div>
-    <div class="row mt-3">
+    <div class="row">
       <div class="col-12">
         <Roadmap />
       </div>
@@ -42,13 +42,17 @@ export default class App extends Vue {}
 <style>
 
 body, html {
-  background-color: rgb(7, 10, 36) !important;
-  color: white !important;
+  background-color: var(--body-background-color) !important;
+  color: var(--font-color) !important;
 }
 
 .turban-border {
-  border: 2px solid rgb(17, 24, 85);
+  border: 2px solid var(--main-fore-color);
   border-radius: .25rem;
+}
+
+p .text-muted {
+  color: var(--text-muted-color) !important;
 }
 
 .turban-coin-footer {
@@ -62,8 +66,8 @@ body, html {
 }
 
 .turban-border-top-bottom {
-  border-bottom: 4px solid rgb(17, 24, 85);
-  border-top: 4px solid rgb(17, 24, 85);
+  border-bottom: 4px solid var(--main-fore-color);
+  border-top: 4px solid var(--main-fore-color);
 }
 
 </style>

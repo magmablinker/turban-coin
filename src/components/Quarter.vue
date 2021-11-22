@@ -1,6 +1,6 @@
 <template>
     <div class="col-12 quarter">
-        <div class="quarter-header p-2 text-center">
+        <div class="quarter-header pb-2 text-center">
             <h2 class="m-0 turban-border-top-bottom p-2">{{ title }}</h2>
         </div>
         <div class="row">
@@ -34,3 +34,10 @@ export default class Quarter extends Vue
 
 }
 </script>
+
+<style scoped>
+    .quarter {
+
+    }
+
+</style>
