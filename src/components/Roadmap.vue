@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12 col-md-6 mx-auto mt-2">
             <h4 class="display-4 m-0">Roadmap</h4>
-            <p class="m-0 text-muted">
+            <p class="text-muted">
                 We want to set realistic and not over exaggerated goals.
             </p>
             <div class="row">
@@ -13,7 +13,8 @@
                 <div class="connector-line"></div>
                 <Quarter title="2022 - Q1"
                         :goals="[ 'Getting first Holders', 
-                                'Starting Marketing' ]" />
+                                'Starting Marketing',
+                                'Launching First Products and Online Store' ]" />
                 <div class="connector-line"></div>
                 <Quarter title="2022 - Q2" 
                         :goals="[ '2,000+ Holder', 
@@ -24,8 +25,7 @@
                 <Quarter title="2022 Q3"
                         :goals="[ '5,000+ Holder', 
                                 'Listing on other Exchanges', 
-                                'Influencer Partnerships',
-                                'Launching First Products and Online Store' ]" />
+                                'Influencer Partnerships' ]" />
             </div>
         </div>
     </div>
@@ -54,5 +54,7 @@ export default class Roadmap extends Vue
         width: 2px;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
     }
 </style>
