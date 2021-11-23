@@ -6,8 +6,8 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="turban-border p-2">
-                    <ul class="list-unstyled mb-0">
-                        <li v-for="goal in goals" :key="goal">
+                    <ul class="list-unstyled mb-0 goals-list">
+                        <li v-for="goal in goals" :key="goal" class="goal">
                             {{ goal }}
                         </li>
                     </ul>
@@ -35,6 +35,12 @@ export default class Quarter extends Vue
 }
 </script>
 
-<style scoped>
+<style>
+
+    ul li:before {
+        font-family: 'Material Icons';
+        padding-right: 8px;
+        content: "🚀"; /* Change this to whichever icon you would like from https://fonts.google.com/icons?selected=Material+Icons */
+    }
 
 </style>
