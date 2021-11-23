@@ -9,26 +9,27 @@
         </div>
       </div>
     </div> -->
-    <div class="row">
-      <div class="col-12 p-0">
-        <!-- TODO: Mobile bg -->
-        <img src="/img/background.jpg" class="turban-bg">
-        <div class="btn-go" @click="onTurbanButtonClick"></div>
-      </div>
+    <div class="row" style="height: 100vh;">
+      <Greeter />
     </div>
     <div class="row mt-3">
       <div class="col-12">
         <Roadmap />
       </div>
     </div>
-        <div class="row mt-3">
+    <div class="row mt-3">
       <div class="col-12">
         <Whitepaper />
       </div>
     </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        <Impressum />
+      </div>
+    </div>
   </div>
   <footer class="turban-coin-footer text-center p-2">
-    Made with ❤ in Switzerland
+    Made with ❤ in Switzerland <span class="version-number">v{{ version }}</span>
   </footer>
 </template>
 
@@ -36,11 +37,18 @@
 import { Options, Vue } from 'vue-class-component';
 import Roadmap from "@/components/Roadmap.vue";
 import Whitepaper from "@/components/Whitepaper.vue";
+import Greeter from "@/components/Greeter.vue";
+import Impressum from "@/components/Impressum.vue";
+import { version } from "../package.json";
+import { inject } from "inversify-props";
+import LanguageService from "@/services/language/LanguageService";
 
 @Options({
   components: {
     Roadmap,
-    Whitepaper
+    Whitepaper,
+    Greeter,
+    Impressum
   },
 })
 export default class App extends Vue 
@@ -51,6 +59,11 @@ export default class App extends Vue
     let scrollDistance = document.documentElement.clientHeight;
 
     window.scrollBy(0, scrollDistance);
+  }
+
+  get version(): string
+  {
+    return version ?? "0.0.0"
   }
 
 }
@@ -87,21 +100,7 @@ p .text-muted {
   border-top: 4px solid var(--main-fore-color);
 }
 
-.turban-bg {
-  width: 100%;
-  height: 100vh;
+.version-number {
+  float: right;
 }
-
-.btn-go {
-  position: absolute;
-  right: 0;
-  height: 80px;
-  bottom: 0;
-  width: 490px;
-}
-
-.btn-go:hover {
-  cursor: pointer;
-}
-
 </style>

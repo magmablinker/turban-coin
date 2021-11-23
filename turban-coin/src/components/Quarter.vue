@@ -36,8 +36,5 @@ export default class Quarter extends Vue
 </script>
 
 <style scoped>
-    .quarter {
-
-    }
 
 </style>

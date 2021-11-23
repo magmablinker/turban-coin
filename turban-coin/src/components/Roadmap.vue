@@ -3,7 +3,7 @@
         <div class="col-12 col-md-6 mx-auto mt-2">
             <h4 class="display-4 m-0">Roadmap</h4>
             <p class="text-muted">
-                We want to set realistic and not over exaggerated goals.
+                We want to set realistic and not over exaggerated goals. But we're shooting for the stars nonetheless.
             </p>
             <div class="row">
                 <Quarter title="2021 - Q4" 
