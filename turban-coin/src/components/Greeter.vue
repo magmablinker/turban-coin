@@ -1,14 +1,8 @@
 <template>
     <div class="col-12 p-0 turban-greeter">
-        <div class="sky">
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-        </div>
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
         <div class="row h-100 m-0">
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="logo">

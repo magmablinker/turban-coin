@@ -29,7 +29,7 @@
     </div>
   </div>
   <footer class="turban-coin-footer text-center p-2">
-    Made with ❤ in Switzerland <span class="version-number">v{{ version }}</span>
+    Made with 💙 in Switzerland <span class="version-number">v{{ version }}</span>
   </footer>
 </template>
 
