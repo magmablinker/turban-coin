@@ -54,13 +54,6 @@ import LanguageService from "@/services/language/LanguageService";
 export default class App extends Vue 
 {
 
-  private onTurbanButtonClick(): void
-  {
-    let scrollDistance = document.documentElement.clientHeight;
-
-    window.scrollBy(0, scrollDistance);
-  }
-
   get version(): string
   {
     return version ?? "0.0.0"

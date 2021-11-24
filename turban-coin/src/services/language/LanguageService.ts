@@ -1,31 +1,24 @@
 import LanguageDto from "@/classes/dtos/LanguageDto";
+import axios from "axios";
+import { reactive } from "vue";
 
 export default class LanguageService
 {
     
-    private _languageDto!: LanguageDto;
-    private _currentLanguage = "en";
+    private _languageDto: LanguageDto = reactive(new LanguageDto());
+    private _loaded = false;
 
-    constructor(languageDto: LanguageDto)
+
+    public get languageDto(): LanguageDto
     {
-        this._languageDto = languageDto;
+        if(!this._loaded)
+            axios.get("/language/language.json")
+                .then(response => {
+                    this._languageDto = response.data as LanguageDto;
+                    this._loaded = true;
+                });
+
+        return this._languageDto;
     }
 
-    public getItem(key: string)
-    {
-        return this._languageDto.languages[key][this._currentLanguage] ?? `Missing key ${key} in language ${this._currentLanguage}`;
-    }
-
 }
-
-interface LanguageServiceConstructor 
-{
-    new(languageDto: LanguageDto): LanguageService;
-}
-
-interface LanguageServiceFactory extends Function
-{
-    (languageDto: LanguageDto): LanguageService;
-}
-
-export { LanguageServiceConstructor, LanguageServiceFactory }

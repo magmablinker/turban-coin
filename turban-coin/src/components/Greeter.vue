@@ -12,7 +12,7 @@
         <div class="row h-100 m-0">
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="logo">
-                    <h1 class="display-4" v-if="languageService">{{ languageService.getItem("title") }}</h1>
+                  <img src="/img/icons/turban-coin-logo.png" alt="turban-coin-logo" class="turban-coin-logo" @click="onTurbanButtonClick">
                 </div>
             </div>
         </div>
@@ -20,17 +20,27 @@
 </template>
 
 <script lang="ts">
+import LanguageDto from "@/classes/dtos/LanguageDto";
 import LanguageService from "@/services/language/LanguageService";
 import { inject, cid } from "inversify-props";
 import { Vue } from "vue-class-component";
 
 export default class Greeter extends Vue
 {
-  @inject("LanguageServiceFactory") private readonly _languageServiceFactory!: () => LanguageService;
-  private languageService!: LanguageService;
+  @inject() private readonly languageService!: LanguageService;
 
-  mounted() {
-    this.languageService = this._languageServiceFactory();
+  private languageDto!: LanguageDto;
+
+  beforeMount() 
+  {
+    this.languageDto = this.languageService.languageDto;
+  }
+
+  private onTurbanButtonClick(): void
+  {
+    let scrollDistance = document.documentElement.clientHeight;
+
+    window.scrollBy(0, scrollDistance);
   }
 
 }
@@ -43,15 +53,23 @@ export default class Greeter extends Vue
   background: linear-gradient(180deg, rgba(0,0,0,1) 35%, rgba(7,10,36,1) 100%);
 }
 
+.turban-coin-logo {
+  max-width: 50vw;
+}
+
+.turban-coin-logo:hover {
+  cursor: pointer;
+}
+
 .sky {
     position: relative;
-    -webkit-transform: rotateZ(90deg);
-    transform: rotateZ(90deg);
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
 }
 
 .star {
   position: absolute;
-  left: 50%;
+  left: 0;
   top: 50%;
   height: 2px;
   border-radius: 885px;
