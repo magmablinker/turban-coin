@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="col-12 col-md-4 d-flex justify-content-center align-items-center portrait-column mb-4 mb-md-0">
                                     <img src="/img/placeholder.jpeg" alt="developer" class="portrait-image">
-                                    <h5 class="text-muted m-0">Designer</h5>
+                                    <h5 class="text-muted m-0">Community Manager</h5>
                                     <p class="text-muted m-0">forsa</p>
                                 </div>
                                 <div class="col-12 col-md-4 d-flex justify-content-center align-items-center portrait-column">
@@ -59,7 +59,7 @@
                         </div>
                         <div class="about-card-body">
                             <p class="m-0">
-                                The whole team behind turban coin, has always been interested in the blockchain technology. But we also have a big interest in fashion. So we thought, why shouldn't we combine both worlds, and deploy our own token on the blockchain.
+                                The whole team behind turban coin, has always been interested in the newly emerging blockchain technology. But we also have a big interest for fashion. So we thought, why shouldn't we combine both worlds, and deploy our own token on the blockchain with it's own related clothing and luxury item brand.
                             </p>
                         </div>
                     </div>
