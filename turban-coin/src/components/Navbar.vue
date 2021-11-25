@@ -56,10 +56,14 @@ export default class Navbar extends Vue
         background-color: rgba(44, 44, 44, 0.5);
     }
 
-    #language-select {
+    #language-select, 
+    #language-select:focus-visible, 
+    #language-select:focus, 
+    #language-select:active  {
         background-color: rgba(44, 44, 44, 0);
         color: white;
-        border: 0px;
+        border: 0px !important;
+        outline: 0px !important;
     }
 
     #language-select option {

@@ -5,12 +5,22 @@
     </div>
     <div class="row mt-3">
       <div class="col-12">
+        <About />
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
         <Roadmap />
       </div>
     </div>
     <div class="row mt-3">
       <div class="col-12">
         <Whitepaper />
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        <FAQ />
       </div>
     </div>
     <div class="row mt-3">
@@ -30,16 +40,18 @@ import Roadmap from "@/components/Roadmap.vue";
 import Whitepaper from "@/components/Whitepaper.vue";
 import Greeter from "@/components/Greeter.vue";
 import Impressum from "@/components/Impressum.vue";
+import About from "@/components/About.vue";
+import FAQ from "@/components/FAQ.vue";
 import { version } from "../package.json";
-import { inject } from "inversify-props";
-import LanguageService from "@/services/language/LanguageService";
 
 @Options({
   components: {
     Roadmap,
     Whitepaper,
     Greeter,
-    Impressum
+    Impressum,
+    About,
+    FAQ
   },
 })
 export default class App extends Vue 
