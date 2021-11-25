@@ -30,7 +30,7 @@ export default class LanguageDto
             "en": "Starting marketing"
         },
         "2022-Q1-3": {
-            "de": "Veröffentlichung des Online Shops und erste Produkte",
+            "de": "Veröffentlichung des Online Shops und erster Produkte",
             "en": "Launching first products and online store"
         },
         "2022-Q2-1": {
