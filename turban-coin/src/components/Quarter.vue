@@ -5,7 +5,7 @@
         </div>
         <div class="row">
             <div class="col-12 d-flex justify-content-center align-items-center">
-                <div class="turban-border p-2">
+                <div class="turban-card turban-border p-2">
                     <ul class="list-unstyled mb-0 goals-list">
                         <li v-for="goal in goals" :key="goal" class="goal">
                             {{ goal }}

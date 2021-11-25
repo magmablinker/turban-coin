@@ -8,12 +8,12 @@
         <About />
       </div>
     </div>
-    <div class="row mt-3">
+    <div class="row mt-3 mb-3">
       <div class="col-12">
         <Roadmap />
       </div>
     </div>
-    <div class="row mt-3">
+    <!-- <div class="row mt-3">
       <div class="col-12">
         <Whitepaper />
       </div>
@@ -27,7 +27,7 @@
       <div class="col-12">
         <Impressum />
       </div>
-    </div>
+    </div> -->
   </div>
   <footer class="turban-coin-footer text-center p-2">
     Made with 💙 in Switzerland <span class="version-number">v{{ version }}</span>
@@ -96,7 +96,33 @@ p .text-muted {
   border-top: 4px solid var(--main-fore-color);
 }
 
+.turban-border-bottom {
+  border-bottom: 4px solid var(--main-fore-color);
+}
+
 .version-number {
   float: right;
 }
+
+.turban-card {
+    background: rgb(0,0,0);
+    background: var(--turban-fade);
+    -webkit-box-shadow: 0px 0px 10px 1px #000000; 
+    box-shadow: 0px 0px 10px 1px #000000;
+}
+
+.turban-card-header {
+    border-bottom: 2px solid var(--main-fore-color);
+    margin-bottom: .25rem;
+}
+
+.turban-card-body {
+  padding: .25rem;
+}
+
+.w-fit-content {
+  width: fit-content !important;
+  block-size: fit-content !important;
+}
+
 </style>

@@ -3,4 +3,5 @@
     --body-background-color: rgb(7, 10, 36);
     --font-color: white;
     --text-muted-color: rgba(255, 255, 255, 0.747);
+    --turban-fade: linear-gradient(180deg, rgba(0,0,0,1) 35%, rgba(7,10,36,1) 100%);
 }

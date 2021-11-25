@@ -51,7 +51,7 @@ export default class Greeter extends Vue
 .turban-greeter {
   height: 100vh;
   background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 35%, rgba(7,10,36,1) 100%);
+  background: var(--turban-fade);
 }
 
 .turban-coin-logo {

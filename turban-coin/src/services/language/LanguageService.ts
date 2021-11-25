@@ -11,12 +11,12 @@ export default class LanguageService
 
     public get languageDto(): LanguageDto
     {
-        if(!this._loaded)
-            axios.get("/language/language.json")
-                .then((response: any) => {
-                    this._languageDto.languages = response.data as Record<string, Record<string, string>>;
-                    this._loaded = true;
-                });
+        // if(!this._loaded)
+        //     axios.get("/language/language.json")
+        //         .then((response: any) => {
+        //             this._languageDto.languages = response.data as Record<string, Record<string, string>>;
+        //             this._loaded = true;
+        //         });
 
         return this._languageDto;
     }
