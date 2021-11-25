@@ -15,11 +15,11 @@
                                 </div>
                                 <div class="col">
                                     <ul class="list-unstyled">
-                                        <li class="mb-1">We want to create a coin that has an utility beyond pumping and dumping.</li>
+                                        <li class="mb-1">We want to create a coin that has a utility beyond pumping and dumping.</li>
                                         <li class="mb-1">We're looking for long term growth. We wan't to build an established brand.</li>
                                         <li class="mb-1">Our main goal is, to fund our project with the sale of turban coin tokens.</li>
                                         <li class="mb-1">We're currently focusing on, developing the website, webshop and smart contract for turban coin.</li>
-                                        <li class="mb-1">When we're ready we'll deploy an online shop we're you'll be able to buy various products related to turban coin. The main focus will lie on turbans, as the name of the coin implies.</li>
+                                        <li class="mb-1">When we're ready we'll deploy an online shop where you'll be able to buy various products related to turban coin. The main focus will lie on turbans, as the name of the coin implies.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -52,6 +52,18 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-12 mt-2">
+                    <div class="about-card turban-border p-2">
+                        <div class="about-card-header">
+                            <h4 class="m-0 pb-0">Why are we doing this project?</h4>
+                        </div>
+                        <div class="about-card-body">
+                            <p class="m-0">
+                                The whole team behind turban coin, has always been interested in the blockchain technology. But we also have a big interest in fashion. So we thought, why shouldn't we combine both worlds, and deploy our own token on the blockchain.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -70,6 +82,8 @@ export default class About extends Vue
     .about-card {
         background: rgb(0,0,0);
         background: linear-gradient(180deg, rgba(0,0,0,1) 35%, rgba(7,10,36,1) 100%);
+        -webkit-box-shadow: 0px 0px 10px 1px #000000; 
+        box-shadow: 0px 0px 10px 1px #000000;
     }
 
     .about-card-header {

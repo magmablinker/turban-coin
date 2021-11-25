@@ -1,11 +1,11 @@
 <template>
     <div class="turban-navbar">
         <ul class="list-unstyled m-0 h-100 d-flex align-items-center justify-self-center">
-            <li class="d-inline nav-item" @click="() => scrollTo('roadmap')">
-                Roadmap
-            </li>
             <li class="d-inline nav-item" @click="() => scrollTo('about')">
                 About
+            </li>
+            <li class="d-inline nav-item" @click="() => scrollTo('roadmap')">
+                Roadmap
             </li>
             <li class="ms-auto">
                 <select name="language" id="language-select" class="p-1" v-model="languageDto.currentLanguage">
