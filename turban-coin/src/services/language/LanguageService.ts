@@ -13,8 +13,8 @@ export default class LanguageService
     {
         if(!this._loaded)
             axios.get("/language/language.json")
-                .then(response => {
-                    this._languageDto = response.data as LanguageDto;
+                .then((response: any) => {
+                    this._languageDto.languages = response.data as Record<string, Record<string, string>>;
                     this._loaded = true;
                 });
 

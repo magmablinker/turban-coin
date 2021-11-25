@@ -37,7 +37,7 @@ export default class Quarter extends Vue
 
 <style>
 
-    ul li:before {
+    ul li.goal:before {
         font-family: 'Material Icons';
         padding-right: 8px;
         content: "🚀"; /* Change this to whichever icon you would like from https://fonts.google.com/icons?selected=Material+Icons */

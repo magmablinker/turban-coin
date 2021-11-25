@@ -4,11 +4,12 @@
         <div id="stars2"></div>
         <div id="stars3"></div>
         <div class="row h-100 m-0">
-            <div class="col-12 d-flex justify-content-center align-items-center">
-                <div class="logo">
-                  <img src="/img/icons/turban-coin-logo.png" alt="turban-coin-logo" class="turban-coin-logo" @click="onTurbanButtonClick">
-                </div>
-            </div>
+          <Navbar />
+          <div class="col-12 d-flex justify-content-center align-items-center">
+              <div class="logo">
+                <img src="/img/icons/turban-coin-logo.png" alt="turban-coin-logo" class="turban-coin-logo" @click="onTurbanButtonClick">
+              </div>
+          </div>
         </div>
     </div>
 </template>
@@ -16,9 +17,15 @@
 <script lang="ts">
 import LanguageDto from "@/classes/dtos/LanguageDto";
 import LanguageService from "@/services/language/LanguageService";
-import { inject, cid } from "inversify-props";
-import { Vue } from "vue-class-component";
+import { inject } from "inversify-props";
+import { Options, Vue } from "vue-class-component";
+import Navbar from "@/components/Navbar.vue";
 
+@Options({
+  components: {
+    Navbar
+  }
+})
 export default class Greeter extends Vue
 {
   @inject() private readonly languageService!: LanguageService;

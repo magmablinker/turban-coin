@@ -1,14 +1,5 @@
 <template>
   <div class="container-fluid">
-    <!-- <div class="row mt-3">
-      <div class="col-12 align-items-center justify-content-center">
-        <div class="turban-border text-center p-2">
-          <h4 class="display-2 m-0">
-            Turban Coin
-          </h4>
-        </div>
-      </div>
-    </div> -->
     <div class="row" style="height: 100vh;">
       <Greeter />
     </div>
