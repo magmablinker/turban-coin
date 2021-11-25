@@ -10,7 +10,7 @@
                         </div>
                         <div class="about-card-body">
                             <div class="row p-2">
-                                <div class="col d-flex justify-content-center align-items-center">
+                                <div class="col-12 col-md-4 mb-2 mb-md-0 d-flex justify-content-center align-items-center">
                                     <img src="/icon.png" alt="turban-icon" class="turban-icon">
                                 </div>
                                 <div class="col">

@@ -50,7 +50,7 @@ export default class LanguageDto
             "en": "1,000,000 $ Marketcap"
         },
         "2022-Q3-1": {
-            "de": "5'000+ Holders",
+            "de": "5'000+ Holder",
             "en": "5,000+ holders"
         },
         "2022-Q3-2": {
