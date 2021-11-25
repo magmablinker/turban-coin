@@ -4,6 +4,9 @@
             <li class="d-inline nav-item" @click="() => scrollTo('roadmap')">
                 Roadmap
             </li>
+            <li class="d-inline nav-item" @click="() => scrollTo('about')">
+                About
+            </li>
             <li class="ms-auto">
                 <select name="language" id="language-select" class="p-1" v-model="languageDto.currentLanguage">
                     <option value="en">English</option>
@@ -49,10 +52,11 @@ export default class Navbar extends Vue
 <style>
     .turban-navbar {
         position: absolute;
-        width: 100vw;
+        width: 100vw !important;
         height: 50px;
         left: 0;
-        top: -5px;
+        top: 0px;
+        margin: 0px;
         background-color: rgba(44, 44, 44, 0.5);
     }
 
@@ -70,7 +74,14 @@ export default class Navbar extends Vue
         background-color: rgba(44, 44, 44, 1);
     }
 
+    .nav-item {
+        margin-right: .5rem;
+        transition: color .25s ease;
+    }
+
     .nav-item:hover {
         cursor: pointer;
+        color: rgb(183, 190, 255);
+        transition: color .25s ease;
     }
 </style>
