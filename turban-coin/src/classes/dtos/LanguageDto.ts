@@ -102,8 +102,8 @@ export default class LanguageDto
             "en": "Developer"
         },
         "forsaTitle": {
-            "de": "Community Manager",
-            "en": "Community Manager"
+            "de": "Community",
+            "en": "Community"
         },
         "faebTitle": {
             "de": "Marketing",

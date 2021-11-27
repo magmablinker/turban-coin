@@ -58,7 +58,7 @@
                             <h4 class="m-0 pb-0">{{ languageDto.getItem("whyAreWeDoingThisProject") }}</h4>
                         </div>
                         <div class="turban-card-body">
-                            <h6 class="w-fit-content" style="border-bottom: 1px solid white !important;">
+                            <h6 class="w-fit-content pb-1" style="border-bottom: 1px solid white !important;">
                                 {{ languageDto.getItem("whyAreWeDoingThisProjectText1") }}
                             </h6>
                             <p class="m-0">
