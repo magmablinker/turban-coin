@@ -2,16 +2,30 @@
     <div class="turban-navbar">
         <ul class="list-unstyled m-0 h-100 d-flex align-items-center justify-self-center">
             <li class="d-inline nav-item" @click="() => scrollTo('about')">
-                About
+                {{ languageDto.getItem("about") }}
             </li>
             <li class="d-inline nav-item" @click="() => scrollTo('roadmap')">
-                Roadmap
+                {{ languageDto.getItem("roadmap") }}
             </li>
             <li class="ms-auto">
-                <select name="language" id="language-select" class="p-1" v-model="languageDto.currentLanguage">
-                    <option value="en">English</option>
-                    <option value="de">Deutsch</option>
-                </select>
+                <div class="language-dropdown">
+                    <div class="row justify-content-center align-items-center icon" @click="toggleLanguageDropdown">
+                        <div class="col p-0 pe-1 icon">
+                            {{ languageDto.currentLanguageLong }}
+                        </div>
+                        <div class="col p-0 pe-2 d-flex align-items-center">
+                            <span class="material-icons">{{ showLanguageDropdown ? "expand_less" : "expand_more" }}</span>
+                        </div>
+                    </div>
+                    <div class="language-dropdown-items" v-if="showLanguageDropdown">
+                        <div class="language-dropdown-item" @click="() => setLanguage('en')">
+                            English
+                        </div>
+                        <div class="language-dropdown-item" @click="() => setLanguage('de')">
+                            Deutsch
+                        </div>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
@@ -28,6 +42,7 @@ export default class Navbar extends Vue
 
     @inject() private readonly _languageService!: LanguageService;
     private languageDto!: LanguageDto;
+    private showLanguageDropdown = false;
 
     beforeMount(): void
     {
@@ -41,9 +56,15 @@ export default class Navbar extends Vue
         elem?.scrollIntoView({ behavior: "smooth" });
     }
 
-    private onLanguageChange(change: any): void
+    private setLanguage(language: string): void
     {
-        console.log(change);
+        this.languageDto.currentLanguage = language;
+        this.toggleLanguageDropdown();
+    }
+
+    private toggleLanguageDropdown(): void
+    {
+        this.showLanguageDropdown = !this.showLanguageDropdown;
     }
 
 }
@@ -60,28 +81,31 @@ export default class Navbar extends Vue
         background-color: rgba(44, 44, 44, 0.5);
     }
 
-    #language-select, 
-    #language-select:focus-visible, 
-    #language-select:focus, 
-    #language-select:active  {
-        background-color: rgba(44, 44, 44, 0);
-        color: white;
-        border: 0px !important;
-        outline: 0px !important;
-    }
-
-    #language-select option {
-        background-color: rgba(44, 44, 44, 1);
-    }
-
     .nav-item {
         margin-right: .5rem;
         transition: color .25s ease;
     }
 
-    .nav-item:hover {
+    .nav-item:hover, .language-dropdown-item:hover {
         cursor: pointer;
         color: rgb(183, 190, 255);
         transition: color .25s ease;
+    }
+
+    .icon:hover {
+        cursor: pointer;
+    }
+
+    .language-dropdown-items {
+        position: absolute;
+        padding: .5rem;
+        background-color:rgba(44, 44, 44, 0.8);
+        border-radius: .25rem;
+        right: .5rem;
+    }
+
+    .language-dropdown-item {
+        transition: color .25s ease;
+        padding: .25rem;
     }
 </style>

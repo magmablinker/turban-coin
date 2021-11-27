@@ -1,12 +1,12 @@
 <template>
     <div class="row" id="about" style="min-height: 100vh;">
         <div class="col-12 col-md-6 mx-auto">
-            <h4 class="display-4 m-0">About</h4>
+            <h4 class="display-4 m-0">{{ languageDto.getItem("about") }}</h4>
             <div class="row">
                  <div class="col-12">
                     <div class="turban-card turban-border p-2">
                         <div class="turban-card-header">
-                            <h4 class="m-0 pb-1">What are we planning?</h4>
+                            <h4 class="m-0 pb-1">{{ languageDto.getItem("whatAreWePlanning") }}</h4>
                         </div>
                         <div class="turban-card-body">
                             <div class="row p-2">
@@ -15,11 +15,11 @@
                                 </div>
                                 <div class="col">
                                     <ul class="list-unstyled">
-                                        <li class="mb-1">We want to create a coin that has a utility beyond pumping and dumping.</li>
-                                        <li class="mb-1">We're looking for long term growth. We wan't to build an established brand.</li>
-                                        <li class="mb-1">Our main goal is, to fund our project with the sale of turban coin tokens.</li>
-                                        <li class="mb-1">We're currently focusing on, developing the website, webshop and smart contract for turban coin.</li>
-                                        <li class="mb-1">When we're ready we'll deploy an online shop where you'll be able to buy various products related to turban coin. The main focus will lie on turbans, as the name of the coin implies.</li>
+                                        <li class="mb-1">{{ languageDto.getItem("whatAreWePlanningText1") }}</li>
+                                        <li class="mb-1">{{ languageDto.getItem("whatAreWePlanningText2") }}</li>
+                                        <li class="mb-1">{{ languageDto.getItem("whatAreWePlanningText3") }}</li>
+                                        <li class="mb-1">{{ languageDto.getItem("whatAreWePlanningText4") }}</li>
+                                        <li class="mb-1">{{ languageDto.getItem("whatAreWePlanningText5") }}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -29,23 +29,23 @@
                 <div class="col-12 mt-2">
                     <div class="turban-card turban-border p-2">
                         <div class="turban-card-header">
-                            <h4 class="m-0 pb-1">Who are we?</h4>
+                            <h4 class="m-0 pb-1">{{ languageDto.getItem("whoAreWe") }}</h4>
                         </div>
                         <div class="turban-card-body">
                             <div class="row p-2">
                                 <div class="col-12 col-md-4 d-flex justify-content-center align-items-center portrait-column mb-4 mb-md-0">
                                     <img src="/img/placeholder.jpeg" alt="developer" class="portrait-image">
-                                    <h5 class="text-muted m-0">Developer</h5>
+                                    <h5 class="text-muted m-0">{{ languageDto.getItem("pmmaTitle") }}</h5>
                                     <p class="text-muted m-0">pmma_</p>
                                 </div>
                                 <div class="col-12 col-md-4 d-flex justify-content-center align-items-center portrait-column mb-4 mb-md-0">
                                     <img src="/img/placeholder.jpeg" alt="developer" class="portrait-image">
-                                    <h5 class="text-muted m-0">Community Manager</h5>
+                                    <h5 class="text-muted m-0">{{ languageDto.getItem("forsaTitle") }}</h5>
                                     <p class="text-muted m-0">forsa</p>
                                 </div>
                                 <div class="col-12 col-md-4 d-flex justify-content-center align-items-center portrait-column">
                                     <img src="/img/placeholder.jpeg" alt="developer" class="portrait-image">
-                                    <h5 class="text-muted m-0">Marketing</h5>
+                                    <h5 class="text-muted m-0">{{ languageDto.getItem("faebTitle") }}</h5>
                                     <p class="text-muted m-0">fäb</p>
                                 </div>
                             </div>
@@ -55,14 +55,14 @@
                 <div class="col-12 mt-2">
                     <div class="turban-card turban-border p-2">
                         <div class="turban-card-header">
-                            <h4 class="m-0 pb-0">Why are we doing this project?</h4>
+                            <h4 class="m-0 pb-0">{{ languageDto.getItem("whyAreWeDoingThisProject") }}</h4>
                         </div>
                         <div class="turban-card-body">
                             <h6 class="w-fit-content" style="border-bottom: 1px solid white !important;">
-                                The whole team behind turban coin, has always been interested in the newly emerging blockchain technology. 
+                                {{ languageDto.getItem("whyAreWeDoingThisProjectText1") }}
                             </h6>
                             <p class="m-0">
-                                But we also always had a big interest in fashion. So we thought, why shouldn't we combine both worlds, and deploy our own token on the blockchain with it's own related clothing and luxury item brand.
+                                {{ languageDto.getItem("whyAreWeDoingThisProjectText2") }}
                             </p>
                         </div>
                     </div>
@@ -70,20 +70,20 @@
                 <div class="col-12 mt-2">
                     <div class="turban-card turban-border p-2">
                         <div class="turban-card-header">
-                            <h4 class="m-0 pb-0">What are the plans for the future?</h4>
+                            <h4 class="m-0 pb-0">{{ languageDto.getItem("whatAreOurPlansForTheFuture") }}</h4>
                         </div>
                         <div class="turban-card-body">
                             <p>
-                                In the near future we'll start producing the first prototypes of turban coin merchandise.
+                                {{ languageDto.getItem("whatAreOurPlansForTheFutureText1") }}
                             </p>
                             <p>
-                                In a second step we'll release turban coin nfts which will provide special benefits for you if you're a lucky owner.
+                                {{ languageDto.getItem("whatAreOurPlansForTheFutureText2") }}
                             </p>
                             <p>
-                                In the final step we'll release our online shop and launch our first products on it.
+                                {{ languageDto.getItem("whatAreOurPlansForTheFutureText3") }}
                             </p>
                             <p class="m-0">
-                                After that we'll continusly keep adding new products to our online shop which will be released for each season respectively.
+                                {{ languageDto.getItem("whatAreOurPlansForTheFutureText4") }}
                             </p>
                         </div>
                     </div>
@@ -94,10 +94,20 @@
 </template>
 
 <script lang="ts">
+import LanguageDto from "@/classes/dtos/LanguageDto";
+import LanguageService from "@/services/language/LanguageService";
+import { inject } from "inversify-props";
 import { Vue } from "vue-class-component";
 
 export default class About extends Vue
 {
+    @inject() private readonly _languageService!: LanguageService;
+    private languageDto!: LanguageDto;
+    
+    beforeMount(): void
+    {
+        this.languageDto = this._languageService.languageDto;
+    }
 
 }
 </script>
